@@ -61,5 +61,5 @@ with col3:
         label="Nexus resilience index", 
         value=f"{score:.2f}",
         delta="Critical" if score < 0.6 else "Stable",
-        delta_color="inverse" if score < 0.4 else "normal", border = True)
+        delta_color="inverse" if score < 0.6 else "normal", border = True)
 
