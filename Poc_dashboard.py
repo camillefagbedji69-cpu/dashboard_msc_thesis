@@ -45,7 +45,7 @@ else:
 data_bassin = data[data['ws_id'] == bassin_choisi].iloc[0]
 
 # 4. AFFICHAGE DES MÉTRIQUES
-st.title(f"📍 Metrics of the sub-watershed N°: {bassin_choisi}")
+st.title(f"Metrics of the sub-watershed N°: {bassin_choisi}")
 
 col1, col2, col3 = st.columns(3)
 
