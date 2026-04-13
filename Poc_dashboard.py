@@ -20,7 +20,7 @@ folium.GeoJson(shape).add_to(m)
 st.sidebar.header("Configuration")
 bassin_choisi = st.sidebar.selectbox(
     "Choose a sub-watershed:",
-    options=df['ws_id'].unique())
+    options=data['ws_id'].unique())
 
 # 3. FILTRAGE : On récupère uniquement la ligne du bassin sélectionné
 data_bassin = data[data['ws_id'] == bassin_choisi].iloc[0]
