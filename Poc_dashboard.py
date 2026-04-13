@@ -19,7 +19,7 @@ folium.GeoJson(shape).add_to(m)
 # ... tes imports ...
 
 # 1. On affiche la carte et on capture l'interaction
-map_data = st_folium.st_folium(m, width=700, height = 300, key="map")
+map_data = st_folium.st_folium(m, width=700, height = 400, key="map")
 
 # 2. On détermine quel bassin est sélectionné
 # Priorité : le clic sur la carte, sinon la sélection dans la sidebar
