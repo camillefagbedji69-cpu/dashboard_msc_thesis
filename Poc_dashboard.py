@@ -17,7 +17,7 @@ m = folium.Map(location=[shape.centroid.y.mean(), shape.centroid.x.mean()], zoom
 folium.GeoJson(shape).add_to(m)
 
 # Display in Streamlit
-st_folium(m, width=700, height=500)
+st_folium(m, width=700)
 
 ## Configuration 
 st.sidebar.header("Configuration")
