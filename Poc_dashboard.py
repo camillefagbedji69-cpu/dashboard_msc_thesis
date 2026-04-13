@@ -47,7 +47,7 @@ data_bassin = data[data['ws_id'] == bassin_choisi].iloc[0]
 # 4. AFFICHAGE DES MÉTRIQUES
 st.title(f"📍 Metrics of the sub-watershed N°: {bassin_choisi}")
 
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     st.metric(label="Carbon strorage", value=f"{data_bassin['carbon_ha']:.1f} t/ha", border = True)
@@ -62,6 +62,4 @@ with col3:
         value=f"{score:.2f}",
         delta="Critical" if score < 0.6 else "Stable",
         delta_color="inverse" if score < 0.4 else "normal", border = True)
-with col4: 
-    st.metric(label = "Area of sub-watershed", value = f"{data_bassin['area']:.1f} ha", border = True)
 
