@@ -12,7 +12,7 @@ shape = gpd.read_file("bassins.shp")
 data = pd.read_csv("Water.csv")
 
 ## Transformation to GeoJSON file 
-m = folium.Map(location=[9.1, 2.2], zoom_start=10)
+m = folium.Map(location=[9.345, 2.612], zoom_start=10)
 # Add Shapefile to Map
 folium.GeoJson(shape).add_to(m)
 
