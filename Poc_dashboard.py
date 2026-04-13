@@ -5,7 +5,7 @@ import streamlit_folium as st_folium
 import geopandas as gpd 
 ### Interface 
 
-st.header("Monitoring tool of Wari-Maro - Monts Kouffé National Park")
+st.header("Monitoring tool")
 
 ## Data importations 
 shape = gpd.read_file("bassins.shp")
