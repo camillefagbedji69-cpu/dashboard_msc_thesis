@@ -12,14 +12,14 @@ shape = gpd.read_file("bassins.shp")
 data = pd.read_csv("Water.csv")
 
 ## Transformation to GeoJSON file 
-m = folium.Map(location=[9.345, 2.612], zoom_start=10)
+m = folium.Map(location=[shape.centroid.y.mean(), shape.centroid.x.mean()], zoom_start=10)
 # Add Shapefile to Map
 folium.GeoJson(shape).add_to(m)
 
 # ... tes imports ...
 
 # 1. On affiche la carte et on capture l'interaction
-map_data = st_folium.st_folium(m, width=700, key="map")
+map_data = st_folium.st_folium(m, width=700, height = 300, key="map")
 
 # 2. On détermine quel bassin est sélectionné
 # Priorité : le clic sur la carte, sinon la sélection dans la sidebar
