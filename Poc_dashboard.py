@@ -35,10 +35,10 @@ st.title(f"📍 Metrics of the sub-watershed N°: {bassin_choisi}")
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    st.metric(label="Carbon strorage", value=f"{data_bassin['carbon_ha']:.1f} t/ha", border = True)
+    st.metric(label="Carbon strorage", value=f"{data_bassin['carbon_ha']:.3f} t/ha", border = True)
 
 with col2:
-    st.metric(label="Annual Runoff", value=f"{data_bassin['awy_ha']:.1f} m³", border = True)
+    st.metric(label="Annual Runoff", value=f"{data_bassin['awy_ha']:.3f} m³", border = True)
 
 with col3:
     score = data_bassin['R_nexus']
@@ -46,5 +46,8 @@ with col3:
         label="Nexus resilience index", 
         value=f"{score:.2f}",
         delta="Critical" if score < 0.6 else "Stable",
-        delta_color="inverse" if score < 0.4 else "normal")
+        delta_color="inverse" if score < 0.4 else "normal", border = True)
+
+with col4: 
+    st.metric(label = "Area of sub-watershed", value = f"{data_bassin['area']:.3f} ha", border = True)
 
