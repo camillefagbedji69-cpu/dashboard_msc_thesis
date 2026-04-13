@@ -12,7 +12,7 @@ shape = gpd.read_file("bassins.shp")
 data = pd.read_csv("Water.csv")
 
 ## Transformation to GeoJSON file 
-m = folium.Map(location=[shape.centroid.y.mean(), shape.centroid.x.mean()], zoom_start=10)
+m = folium.Map(location=[9.1, 2.2], zoom_start=10)
 # Add Shapefile to Map
 folium.GeoJson(shape).add_to(m)
 
@@ -23,8 +23,7 @@ st_folium(m, width=700)
 st.sidebar.header("Configuration")
 bassin_choisi = st.sidebar.selectbox(
     "Choose a sub-watershed:",
-    options=df['ws_id'].unique()
-)
+    options=df['ws_id'].unique())
 
 # 3. FILTRAGE : On récupère uniquement la ligne du bassin sélectionné
 data_bassin = data[data['ws_id'] == bassin_choisi].iloc[0]
