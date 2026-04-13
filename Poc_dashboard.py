@@ -50,10 +50,10 @@ st.subheader(f"Metrics of the sub-watershed N°: {bassin_choisi}")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.metric(label="Carbon strorage", value=f"{data_bassin['carbon_ha']:.1f} t/ha", border = True)
+    st.metric(label="Carbon strorage (t/ha)", value=f"{data_bassin['carbon_ha']:.1f}", border = True)
 
 with col2:
-    st.metric(label="Annual Runoff", value=f"{data_bassin['awy_ha']:.1f} m³/ha", border = True)
+    st.metric(label="Annual Runoff (m³/ha)", value=f"{data_bassin['awy_ha']:.1f}", border = True)
 
 with col3:
     score = data_bassin['R_nexus']
