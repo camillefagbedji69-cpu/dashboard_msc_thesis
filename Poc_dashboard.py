@@ -53,7 +53,7 @@ with col1:
     st.metric(label="Carbon strorage", value=f"{data_bassin['carbon_ha']:.1f} t/ha", border = True)
 
 with col2:
-    st.metric(label="Annual Runoff", value=f"{data_bassin['awy_ha']:.1f} m³", border = True)
+    st.metric(label="Annual Runoff", value=f"{data_bassin['awy_ha']:.1f} m³/ha", border = True)
 
 with col3:
     score = data_bassin['R_nexus']
